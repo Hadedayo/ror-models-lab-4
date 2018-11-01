@@ -40,6 +40,13 @@ class CookController < ApplicationController
   end
 
   def update
+    @update_chef = Chef.find(params[:id])
+    if @update_chef.update_attributes(params[:first_name])
+      redirect_to(@update_chef)
+    else
+      render "edit"
+    end
+  end
 
     # code to figure out which post we're trying to update, then
     # actually update the attributes of that post.  Once that's
