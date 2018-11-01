@@ -1,2 +1,9 @@
 <h1>Cook#dish</h1>
-<p><%= @title%></p>
+
+<% @all_my_dishes.each do |i| %>
+ <div class="main_content">
+   <ul>
+     <li><%= i.name %>, <%= i.veg %>, <%= i.rating %></li>
+   </ul>
+  </div>
+<% end %>
