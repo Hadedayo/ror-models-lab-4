@@ -1,0 +1,10 @@
+<p><% @content_for_home %></p>
+
+<% @all_my_chefs.each do |i| %>
+ <div class="main_content">
+   <ul>
+     <h2><a href="/<%= i.id%>"><%= i.first_name %></a></h2>
+     <li><%= i.first_name %>, <%= i.last_name %>, <%= i.age %></li>
+   </ul>
+  </div>
+<% end %>
